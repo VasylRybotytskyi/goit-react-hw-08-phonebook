@@ -72,7 +72,7 @@ export const DivName = styled.div`
   min-width: 220px;
 `;
 
-export const Spinner = styled(Spin)`
+export const Spiner = styled(Spin)`
   position: absolute;
   top: 25px;
   left: 50%;
