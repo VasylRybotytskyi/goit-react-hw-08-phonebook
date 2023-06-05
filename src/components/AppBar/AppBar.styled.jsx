@@ -20,8 +20,8 @@ export const Link = styled(NavLink)`
     margin-right: 20px;
   }
   &.active {
-    color: #3a97e8;
-    border-top: 2px solid #3a97e8;
+    color: #b31e48;
+    border-top: 2px solid #b31e48;
   }
   text-decoration: none;
   color: inherit;

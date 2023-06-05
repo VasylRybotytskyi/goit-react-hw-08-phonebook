@@ -33,7 +33,6 @@ export default function Login() {
           }}
           onFinish={onFinish}
         >
-          {' '}
           <TitleReg>Log in</TitleReg>
           <FormWrap.Item
             name="email"

@@ -29,11 +29,11 @@ export const List = styled.ul`
 `;
 
 export const UserIcon = styled(UserSwitchOutlined)`
-  color: #c7c6c6;
+  color: #b31e48;
 `;
 
 export const PhoneIcon = styled(PhoneOutlined)`
-  color: #c7c6c6;
+  color: #b31e48;
 `;
 
 export const InputForm = styled(Input)`
@@ -63,7 +63,7 @@ export const UserIconList = styled(UserOutlined)`
   color: #1677ff;
 `;
 
-export const PhoneIconList = styled(PhoneOutlined)`
+export const PhoneiconList = styled(PhoneOutlined)`
   margin: 0 8px;
   color: #1677ff;
 `;

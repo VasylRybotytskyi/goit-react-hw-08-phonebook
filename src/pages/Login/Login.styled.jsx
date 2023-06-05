@@ -41,5 +41,4 @@ export const Container = styled.div`
 export const TitleReg = styled.h2`
   text-align: center;
   margin-bottom: 15px;
-  color: #2e2d2dbc;
 `;

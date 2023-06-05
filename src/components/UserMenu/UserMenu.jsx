@@ -17,7 +17,7 @@ export const UserMenu = () => {
       {/* для виходу використовуємо іконку */}
       <Button type="primary" onClick={() => dispatch(logOut())}>
         <LogoutOutlined /> Log out
-      </Button>{' '}
+      </Button>
       {/* пробіл для відступу */}
     </Wrap>
   );

@@ -16,11 +16,11 @@ export const AddModalBtn = styled(Button)`
 `;
 
 export const UserIcon = styled(UserAddOutlined)`
-  color: #c7c6c6;
+  color: #b31e48;
 `;
 
 export const PhoneIcon = styled(PhoneOutlined)`
-  color: #c7c6c6;
+  color: #b31e48;
 `;
 
 export const InputForm = styled(Input)`

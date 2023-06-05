@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-  Title,
-  HomeUserGroup,
-  Wrap,
-  UnderTitle,
-  HomeLink,
-  Section,
-  HomeEdit,
-  HomePhoneIcon,
-  HomeContactList,
-} from './Home.styled';
+import { Title, UnderTitle, HomeLink, Section, PreTitle } from './Home.styled';
 import { useSelector } from 'react-redux';
 
 export default function Home() {
@@ -17,14 +7,8 @@ export default function Home() {
 
   return (
     <Section>
-      <Title>Welcome to your PhoneBook</Title>
-
-      <Wrap>
-        <HomeEdit />
-        <HomePhoneIcon />
-        <HomeUserGroup />
-        <HomeContactList />
-      </Wrap>
+      <Title>Welcome 👋 to your PhoneBook</Title>
+      <PreTitle>Now you will exactly not forget your contacts!</PreTitle>
 
       {isLoggedIn ? (
         <UnderTitle>
@@ -33,7 +17,7 @@ export default function Home() {
         </UnderTitle>
       ) : (
         <UnderTitle>
-          Please <HomeLink to="/register">Register</HomeLink> or{' '}
+          Please <HomeLink to="/register">Register</HomeLink> or
           <HomeLink to="/login">Log in</HomeLink> to be able to use your
           PhoneBook
         </UnderTitle>
