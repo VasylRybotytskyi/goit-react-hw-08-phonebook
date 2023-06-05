@@ -20,58 +20,59 @@ const handleRejected = (state, action) => {
 };
 
 const authSlise = createSlice({
-  name: 'auth',
+  name: 'auth', // Назва слайса (slice)
   initialState: {
     user: { email: null, password: null },
     token: null,
-    isLoaggedIn: false,
+    isLoggedIn: false,
     isRefreshing: false,
     error: null,
     isLoading: false,
   },
+
   extraReducers: builder => {
     builder
-      .addCase(register.pending, handlePending)
+      .addCase(register.pending, handlePending) // Обробник для pending стану реєстрації
       .addCase(register.fulfilled, (state, action) => {
         state.token = action.payload.token;
         state.user = action.payload.user;
-        state.isLoaggedIn = true;
+        state.isLoggedIn = true;
         state.isLoading = false;
       })
-      .addCase(register.rejected, handleRejected)
+      .addCase(register.rejected, handleRejected) // Обробник для rejected стану реєстрації
 
-      .addCase(loginization.pending, handlePending)
+      .addCase(loginization.pending, handlePending) // Обробник для pending стану логінізації
       .addCase(loginization.fulfilled, (state, action) => {
         state.token = action.payload.token;
         state.user = action.payload.user;
-        state.isLoaggedIn = true;
+        state.isLoggedIn = true;
         state.isLoading = false;
       })
-      .addCase(loginization.rejected, handleRejected)
+      .addCase(loginization.rejected, handleRejected) // Обробник для rejected стану логінізації
 
-      .addCase(logOut.pending, handlePending)
+      .addCase(logOut.pending, handlePending) // Обробник для pending стану виходу
       .addCase(logOut.fulfilled, state => {
         state.user = { email: null, password: null };
         state.token = null;
-        state.isLoaggedIn = false;
+        state.isLoggedIn = false;
         state.isRefreshing = false;
         state.error = null;
         state.isLoading = false;
       })
-      .addCase(logOut.rejected, handleRejected)
+      .addCase(logOut.rejected, handleRejected) // Обробник для rejected стану виходу
 
       .addCase(refreshUser.pending, state => {
         state.isRefreshing = true;
-      })
+      }) // Обробник для pending стану оновлення користувача
       .addCase(refreshUser.fulfilled, (state, action) => {
         state.user = action.payload;
-        state.isLoaggedIn = true;
+        state.isLoggedIn = true;
         state.isRefreshing = false;
       })
       .addCase(refreshUser.rejected, (state, action) => {
         state.isRefreshing = false;
-      });
+      }); // Обробник для rejected стану оновлення користувача
   },
 });
 
-export const authReduser = authSlise.reducer;
+export const authReduser = authSlise.reducer; // Експорт редюсера auth
