@@ -19,7 +19,7 @@ const handleRejected = (state, action) => {
   );
 };
 
-const authSlise = createSlice({
+const authSlice = createSlice({
   name: 'auth', // Назва слайса (slice)
   initialState: {
     user: { email: null, password: null },
@@ -75,4 +75,4 @@ const authSlise = createSlice({
   },
 });
 
-export const authReduser = authSlise.reducer; // Експорт редюсера auth
+export const authReduser = authSlice.reducer; // Експорт редюсера auth

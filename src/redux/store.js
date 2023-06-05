@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'; // Імпорт функції configureStore з Redux Toolkit
-import { authReduser } from './Authorization/authSlise'; // Імпорт редюсера authReduser з файлу authSlise.js
+import { authReduser } from './Authorization/authSlice'; // Імпорт редюсера authReduser з файлу authSlise.js
 import { contactsReduser } from './Contacts/contactsSlice'; // Імпорт редюсера contactsReduser з файлу contactsSlice.js
 import { filterReducer } from './Contacts/filterSlice'; // Імпорт редюсера filterReducer з файлу filterSlice.js
 import storage from 'redux-persist/lib/storage'; // Імпорт модуля storage з redux-persist для роботи з локальним сховищем
