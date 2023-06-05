@@ -7,11 +7,11 @@ import {
   RegLink,
   Container,
   TitleReg,
+  LinkToRegister,
 } from './Login.styled';
 
 import { loginization } from 'redux/Authorization/operations';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 export default function Login() {
   const [form] = FormWrap.useForm();
@@ -66,7 +66,7 @@ export default function Login() {
               Log in
             </LogButton>
             <RegLink>
-              Or <Link to="/register">register now</Link>
+              Or <LinkToRegister to="/register">register now</LinkToRegister>
             </RegLink>
           </FormWrap.Item>
         </FormWrap>

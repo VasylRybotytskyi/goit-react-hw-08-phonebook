@@ -53,6 +53,7 @@ export const RegPassWord = styled(LockOutlined)`
 export const LinkToLog = styled(Link)`
   font-size: 18px;
   margin: 0 4px;
+  color: #ffffff;
 `;
 
 export const ContLabel = styled.div`
@@ -67,5 +68,4 @@ export const ContLabel = styled.div`
 export const TitleReg = styled.h2`
   margin-left: 30%;
   margin-bottom: 15px;
-  color: #2e2d2dbc;
 `;

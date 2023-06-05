@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { Button, Form, Input } from 'antd';
 import { LockOutlined, MailOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
+
+export const LinkToRegister = styled(Link)`
+  color: #ffffff;
+`;
 
 export const FormWrap = styled(Form)`
   width: 300px;
