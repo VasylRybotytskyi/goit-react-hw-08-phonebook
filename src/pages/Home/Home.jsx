@@ -3,7 +3,7 @@ import { Title, UnderTitle, HomeLink, Section, PreTitle } from './Home.styled';
 import { useSelector } from 'react-redux';
 
 export default function Home() {
-  const { isLoggedIn } = useSelector(state => state.auth);
+  const { isLoggedIn } = useSelector(state => state.auth); // Витягується зі стану Redux значення isLoggedIn за допомогою функції useSelector.
 
   return (
     <Section>
