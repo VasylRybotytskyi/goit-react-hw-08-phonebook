@@ -14,12 +14,12 @@ import { loginization } from 'redux/Authorization/operations';
 import { useDispatch } from 'react-redux';
 
 export default function Login() {
-  const [form] = FormWrap.useForm();
-  const dispatch = useDispatch();
+  const [form] = FormWrap.useForm(); // Витягується хук useForm з компоненту FormWrap та його розпаковується до змінної form.
+  const dispatch = useDispatch(); // Витягується діспетчер Redux за допомогою функції useDispatch та його присвоюється змінній dispatch.
 
   const onFinish = values => {
     dispatch(loginization(values)); // для відправки даних на сервер
-    form.resetFields(); // для очищення форми
+    form.resetFields(); // для очищення полів форми
   };
 
   return (
