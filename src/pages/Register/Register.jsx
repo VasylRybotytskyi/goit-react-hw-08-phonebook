@@ -120,15 +120,13 @@ export default function Register() {
           >
             <InputPassword prefix={<RegPassWord />} />
           </Label>
-
           <Label>
-            {' '}
             <SubmitButton type="primary" htmlType="submit">
               Register
-            </SubmitButton>{' '}
+            </SubmitButton>
             <ContLabel>
               or <LinkToLog to="/login"> log in</LinkToLog>if you already have
-              an account{' '}
+              an account
             </ContLabel>
           </Label>
         </FormReg>
