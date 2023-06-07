@@ -1,25 +1,28 @@
-import React from 'react';
-import { Title, UnderTitle, HomeLink, Section, PreTitle } from './Home.styled';
+import { Title, UnderTitle, HomeLink, Section, PreTitle } from './Home.styled'; // для стилів
 import { useSelector } from 'react-redux';
 
 export default function Home() {
-  const { isLoggedIn } = useSelector(state => state.auth); // Витягується зі стану Redux значення isLoggedIn за допомогою функції useSelector.
+  const { isLoaggedIn } = useSelector(state => state.auth); // для перевірки чи залогінений користувач
 
   return (
     <Section>
       <Title>Welcome 👋 to your PhoneBook</Title>
       <PreTitle>Now you will exactly not forget your contacts!</PreTitle>
 
-      {isLoggedIn ? (
+      {/* якщо користувач не залогінений, то виводимо підказку, якщо залогінений, також виводимо підказку */}
+      {!isLoaggedIn ? (
         <UnderTitle>
-          Go to the <HomeLink to="/contacts">Contacts</HomeLink> tab and manage
-          your contacts
+          Please
+          <HomeLink to="/register">Register</HomeLink>
+          or
+          <HomeLink to="/login">Log in</HomeLink>
+          to be able to use your PhoneBook
         </UnderTitle>
       ) : (
         <UnderTitle>
-          Please <HomeLink to="/register">Register</HomeLink> or
-          <HomeLink to="/login">Log in</HomeLink> to be able to use your
-          PhoneBook
+          Go to the tab
+          <HomeLink to="/contacts">Contacts</HomeLink>
+          and manage your contacts
         </UnderTitle>
       )}
     </Section>
